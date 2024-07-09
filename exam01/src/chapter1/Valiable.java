@@ -37,9 +37,9 @@ public static void main(String[] args) {
 //		// 1. 띄워쓰기 규칙
 //		// web site address 
 //		// - Camel Case : 띄워쓰기를 표현 할 때 띄워쓰기를 제거하고 바로앞글자를 대문자로 표시
-		String WebSiteAddress;
-		// -Snake Case: 띄워쓰기를 표현할 때 띄워쓰기 자리에 _로 표시
-		String web_site_address;
+//		String WebSiteAddress;
+//		// -Snake Case: 띄워쓰기를 표현할 때 띄워쓰기 자리에 _로 표시
+//		String web_site_address;
 //		 - Upper : 대문자 표시
 //		 - Lowwer : 소문자 표시
 		
@@ -47,6 +47,18 @@ public static void main(String[] args) {
 //		 lowerCamelCase : 변수, 함수, 메서드 (첫문자를 소문자로 시작)
 //		 UPPER_SANKE_CASE : 상수형(변경 불가형) 변수
 //		 lower_snake_case : 변수, 함수, 메서드(모든 문자를 소문자로 작성)
+		
+		// 상수 (CONSTANT)
+		// 초기화가 이루어지면 변경이 불가능한 변수
+		// 변수 선언 시에 데이터 타입 앞에 final 키워드를 붙여서 선언
+		// final 데이터타입 변수명(상수명);
+		final int MAX;
+		MAX = 100;
+		// 상수 선언과 동시에 초기화
+		final int MIN = 100;
+		
+
+
 		
 	}
 
