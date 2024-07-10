@@ -221,6 +221,13 @@ public class Subject1 {
 				System.out.println(statement.substring(26));
 				System.out.println(statement.substring(26, 31));
 				
+//				참조형 데이터 타입
+//				주소를 가지고 있는 변수의 데이터 타입
+//				null을 가질 수 있음(null:  아무것도 지정되지 않은 상태)
+//				배열 ,클래스, 인터페이스, 열거형이 참조형 데이터 타입에 속함
+				String str2 = null;
+				System.out.println(str2.trim());
+				
 			}
 
 }
