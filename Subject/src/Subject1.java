@@ -108,11 +108,118 @@ public class Subject1 {
 				System.out.println(bool1);
 				System.out.println(bool2);
 				
-				
-				
-				
-				
+//				형 변환 : 데이터 타입이 서로 다른 변수를 옮겨 담는 것
 
+//				자동 형변환 : 작은 데이터 타입의 변수를 큰 데이터 타입의 변수에 옮겨 담을 때 발생
+				
+//				강제 형변환 : 큰 데이터 타입의 변수를 작은 데이터 타입의 변수에 옮겨 담을 때 발생
+
+				int num = 300;
+				long ln = num;
+				System.out.println(ln);
+				int num2 = (int)ln; // 강제 형변환
+				System.out.println(num2);
+				
+				char chr = 100;
+				short srt = (short)chr; // 숫자 타입에서 문자 타입으로의 형변환은 무조건 강제 형변화가 필요
+				
+				
+				int num3 = chr;
+
+//				배열 : 동일한 타입의 변수를 묶어서 저장하는 컨테이너
+//				new 연산자를 이용해서 생성을 해야함
+//				한번 생성된 배열의 크기는 변경할 수 없음
+				
+//				배열변수 선언
+//				데이터타입[] 배열 변수명;
+//				배열생성
+//				new 데이터타입[배열의길이]; 
+				int[] list1;
+				list1 = new int[5];
+				
+				int[] list2 = {1,2,3,4,5};
+				int[] list3 = new int[] {1,2,3,4,5};
+				System.out.println(list1);
+				System.out.println(list2);
+				System.out.println(list3);
+				
+//				 배열의 요소에 접근할 때는 '인덱스'사용
+//				인덱스 0번부터 시작, 마지막 인덱스는 길이의 -1번
+				int item = list2[2];
+				System.out.println(item);
+				list2[0] = 9;
+				item = list2[0];
+				System.out.println(item);
+				
+//				인덱스 범위를 초과하는 인덱스에 접근할 시 예외발생
+//				System.out.println(list2[99]);
+				
+//				배열의 길이를 확인하고자 할땐 .length를 사용 
+//				배열이름.length
+				System.out.println(list2.length);
+				
+				
+				int[] example1 = new int[] {1,2,3};
+				int[] example2 = example1;
+				System.out.println(example1[1]);
+				System.out.println(example2[1]);
+				
+				example1[1] = 99;
+				System.out.println(example1[1]);
+				System.out.println(example2[1]);
+				
+				char[] chr1 = {'a', 'p', 'p', 'l', 'e'};
+				System.out.println(chr1);
+				
+//				String : 문자의 배열(문자열)을 표현하는데 사용되는 참조형 데이터 타입
+//				선언
+//				String 변수명;
+//				생성
+//				new String();
+//				생성 후 초기화
+//				String 변수명 = new String("문자열");
+				String str1 = new String("apple");
+				System.out.println(str1);
+				String statement = new String("My name is Loki   ");
+				
+//				1. 문자열 결함
+//				+ 혹은 concat(문자열)으로 두 문자열을 연결할 수 있음
+				System.out.println(str1 + "@@@");
+				System.out.println(str1.concat("@@@"));
+				
+//				2. 문자열 비교
+//				equals(문자열): 두 분자열이 동등하진 비교
+//				compareTo(문자열) : 두 문자열을 사전순으로 비교(대소문자로 비교)
+//				compareToIgnoreCase(문자열) : 두 문자열을 사전순으로 비교(대소문자로 구분 x)
+				System.out.println(statement.equals("My name is Loki   "));
+				System.out.println(statement.compareTo("My name is Loki   "));
+				
+				
+//				3. 문자열 길이 확인
+//				length(문자열): 문자열의 길이를 반환
+				System.out.println(statement.length());
+				
+//				4. 문자열 변환
+//				toUpperCase() : 모든 문자를 대문자로 변경
+//				toLowerCase() : 모든 문자를 소문자로 변경
+//				trim() : 문자열의 앞뒤 공백을 제거
+				System.out.println(statement.toUpperCase());
+				System.out.println(statement.toLowerCase());
+				System.out.println(statement.trim());
+				
+//				5. 문자열 찾기
+//				indexOf(문자열) : 찾고자하는 문자열의 처음 찾은 위치의 인덱스 번호를 반환
+//				lastIndexOf(문자열) : 찾고자하는 마지막 찾은 위치의 인덱스 번호를 반환
+//				indexOf 와 lastIndexOf 둘다 존재하지 않은 문자열을 찾을 경우 -1을 반환
+				statement = "내가 그린 기린 그림은 잘 그린 기린 그림이고 니가 그린 기린 그림은 잘못 그린 기린 그림이다";
+				System.out.println(statement.indexOf("기린"));
+				System.out.println(statement.lastIndexOf("기린"));
+				System.out.println(statement.indexOf("사자"));
+				
+//				6. 부분 문자열
+//				substring(시작인덱스, 종료인덱스): 문자열을 원하는 크기만큼 추출  
+				System.out.println(statement.substring(26));
+				System.out.println(statement.substring(26, 31));
 				
 			}
 
