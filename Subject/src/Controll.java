@@ -91,6 +91,8 @@ public class Controll {
 		else if (score >= 60) System.out.println("D");
 		else System.out.println("F");
 			
+		
+		
 	
 
 	}
