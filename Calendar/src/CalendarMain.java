@@ -220,12 +220,20 @@ public class CalendarMain extends JFrame {
 
         // 해당 월의 날짜 셀 추가 -> 여기에 task_panel 추가
         for (int day = 1; day <= lastDay; day++) {
-           final JLabel midLabel = new JLabel(String.valueOf(day), SwingConstants.RIGHT);
-            midLabel.setVerticalAlignment(SwingConstants.TOP);
-            midLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1)); // 날짜 셀에 테두리 추가
-            midLabel.setBorder(BorderFactory.createCompoundBorder(
-                midLabel.getBorder(),
-                BorderFactory.createEmptyBorder(3, 5, 5, 5))); // 여백 추가
+           // bottom_panel에 들어갈 날짜 패널 
+        	final JPanel dayPanel = new JPanel();
+        	dayPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
+        	dayPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+        	JLabel dayLabel = new JLabel(String.valueOf(day), SwingConstants.CENTER);
+        	
+        	// 날짜 라벨
+        	dayLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+        	dayLabel.setPreferredSize(new Dimension(300, 30)); // 너비 300, 높이 30
+        	dayLabel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 30)); // 최대 너비를 무한대로 설정
+            dayLabel.setBorder(BorderFactory.createCompoundBorder(
+            		dayLabel.getBorder(),
+              BorderFactory.createEmptyBorder(3, 5, 5, 5))); // 여백 추가
+        	dayPanel.add(dayLabel);
             // 날짜 안에 할일 패널 추가
 
             // 토요일 파란색 표시
